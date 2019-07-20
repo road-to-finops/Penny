@@ -12,7 +12,7 @@
         "s3:GetBucketAcl",
         "s3:GetBucketPolicy"
       ],
-      "Resource": "arn:aws:s3:::stephg-billing-bucket"
+      "Resource": "arn:aws:s3:::buisnesspennybucket"
     },
     {
       "Sid": "Stmt1335892526596",
@@ -23,7 +23,7 @@
       "Action": [
         "s3:PutObject"
       ],
-      "Resource": "arn:aws:s3:::<stephg-billing-bucket>/*"
+      "Resource": "arn:aws:s3:::buisnesspennybucket/*"
     }
   ]
 }
