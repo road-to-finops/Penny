@@ -1,4 +1,4 @@
- CREATE external TABLE kpmgcostanalysisathenadatabase.azure (
+ CREATE external TABLE pennydatabase.azure (
   accountownerid string,
   account string,
   serviceadministratorid string,
