@@ -28,3 +28,11 @@ Currently waiting on:
 
 
 //NOTE for boto3 > pip install -r requirements.txt -t ./files
+
+
+
+
+### Steps
+- Deploy Terraform
+- Run CUR Lambda
+- Wait for report to generate
