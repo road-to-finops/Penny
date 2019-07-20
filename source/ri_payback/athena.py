@@ -62,21 +62,9 @@ def csv_creator(rows):
     return f.getvalue()
 
 
-def email(attachment):
-    role_arn = format_arn(service='iam', account_id="165293267760", resource_type="role", resource="CrossAccountReader") #generates valid ARN from AWS
-    customapps_session = assume_role(role_arn, "RI_Session") #similar to boto3 client
-
-    csvfile  = {"ri_billing.csv" : attachment} #name of file and content
-    messege = build_csv_email(csvfile, "RI Payback", "UKDLCloudOpsFinOps@kpmg.co.uk", 'billing@cloud-ops.co.uk') #attchment, subject, to, from
-
-
-    send_email(messege, 'eu-west-1', customapps_session)
-
-
-
 def lambda_handler(event, context):
 
     QueryExecutionId = athena_query()
     rows = results(QueryExecutionId)
     attachment  = csv_creator(rows)
-    email(attachment)
+
