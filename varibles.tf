@@ -1,9 +1,9 @@
 variable "project" {
-  default = "kpmgcostanalysis"
+  default = "pennycostanalysis"
 }
 
 variable "bucket_name" {
-  default = "thebillingbucketkpmgtestpersonal"
+  default = "buisnesspennybucket"
 }
 
 variable "region" {
