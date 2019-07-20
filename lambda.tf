@@ -1,22 +1,3 @@
-#Dynamo Lambda
-
-data "archive_file" "dynamo_zip" {
-  type        = "zip"
-  source_file = "${path.module}/source/dynamolambda.py"
-  output_path = "${path.module}/output/dynamolambda.zip"
-}
-
-resource "aws_lambda_function" "dynamo" {
-  filename         = "${path.module}/output/dynamolambda.zip"
-  function_name    = "dynamo"
-  role             = "${aws_iam_role.iam_role_for_dynamo.arn}"
-  handler          = "dynamolambda.lambda_handler"
-  source_code_hash = "${data.archive_file.dynamo_zip.output_base64sha256}"
-  runtime          = "python2.7"
-  memory_size      = "512"
-  timeout          = "150"
-}
-
 #Athena createion Lambda
 
 data "archive_file" "athena_zip" {
