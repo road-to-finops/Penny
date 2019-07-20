@@ -1,13 +1,8 @@
-module "admin-sns-email-topic" {
-  source        = "git::https://terraform-readonly:T87kN3x90yu@stash.customappsteam.co.uk/scm/ter/aws_sns_email_notifications.git/?ref=v0.5"
-  display_name  = "CUR Setup is Complete"
-  project_name  = "${var.project}"
-  email_address = "stephanie.gooch@kpmg.co.uk"
-  stack_name    = "cur-sns-email"
+resource "aws_sns_topic" "aws_penny" {
+  name = "aws_penny"
 }
-
 resource "aws_sns_topic_policy" "default" {
-  arn = "${module.admin-sns-email-topic.arn}"
+  arn = "${aws_sns_topic.aws_penny.arn}"
 
   policy = <<POLICY
 {
@@ -31,7 +26,7 @@ resource "aws_sns_topic_policy" "default" {
         "SNS:Publish",
         "SNS:Receive"
       ],
-      "Resource": "${module.admin-sns-email-topic.arn}",
+      "Resource": "${aws_sns_topic.aws_penny.arn}",
       "Condition": {
         "StringEquals": {
           "AWS:SourceOwner": "*"
@@ -45,7 +40,7 @@ resource "aws_sns_topic_policy" "default" {
         "AWS": "*"
       },
       "Action": "SNS:Publish",
-      "Resource": "${module.admin-sns-email-topic.arn}",
+      "Resource": "${aws_sns_topic.aws_penny.arn}",
       "Condition": {
         "StringEquals": {
           "aws:SourceArn": "${aws_s3_bucket.s3_bucket.arn}"

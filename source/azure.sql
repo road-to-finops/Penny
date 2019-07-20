@@ -39,6 +39,6 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
   'serialization.format' = ',',
   'field.delim' = ','
-) LOCATION 's3://kpmgcloud-cost-report/Azure/'
+) LOCATION 's3://pennycostanalysis/Azure/'
 TBLPROPERTIES ('has_encrypted_data'='false');
  
