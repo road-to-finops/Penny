@@ -1,0 +1,1 @@
+MSCK REPAIR TABLE k_p_m_g_billing_athena_with_i_d;

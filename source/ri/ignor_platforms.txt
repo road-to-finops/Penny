@@ -1,0 +1,3 @@
+Windows with SQL Server Standard
+Red Hat Enterprise Linux
+Windows with SQL Server Enterprise

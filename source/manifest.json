@@ -1,0 +1,6 @@
+{
+    "entries":[{
+      "url":"s3://kpmgcloud-cost-report/dynamo.csv",
+      "mandatory":true
+    }]
+}
