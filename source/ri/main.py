@@ -128,6 +128,7 @@ def lambda_handler(event, context):
     service = os.environ["SERVICE"]
     reccomendation = combine_reccomendation(service)
     reccomeded_ri  = purchase_recom.risk(reccomendation, service)
+    print(reccomeded_ri)
 
 
 
