@@ -23,7 +23,7 @@
       "Action": [
         "s3:PutObject"
       ],
-      "Resource": "arn:aws:s3:::stephg-billing-bucket/*"
+      "Resource": "arn:aws:s3:::<stephg-billing-bucket>/*"
     }
   ]
 }
