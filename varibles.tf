@@ -21,4 +21,3 @@ variable "ri_reccomendation_cron" {
 variable "athena_db_name" {
   default = "athenacurcfn_mybillingreport"
 }
-
