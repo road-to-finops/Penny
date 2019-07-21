@@ -75,6 +75,7 @@ data "aws_iam_policy_document" "cur_policy" {
       "lambda:ListEventSourceMappings",
       "lambda:GetFunctionConfiguration",
       "s3:*",
+      "s3:GetBucketLocation",
       "lambda:InvokeFunction",
       "cur:DescribeReportDefinitions",
       "cur:PutReportDefinition",

@@ -1,2 +1,1 @@
-git+https://terraform-readonly:T87kN3x90yu@stash.customappsteam.co.uk/scm/pl/lambda_base.git@0.2.0#egg=lambda_base
 tenacity==5.0.4

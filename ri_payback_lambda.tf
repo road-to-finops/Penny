@@ -23,7 +23,7 @@ module "lambda_ri_payback" {
     variables {
       BUCKET_LOCATION = "s3://${aws_s3_bucket.s3_bucket.id}/Quick/RI"
       DATABASE        = "${var.athena_db_name}"
-      TABLE           = "k_p_m_g_billing_athena_with_i_d"
+      TABLE           = "mybillingreport"
       REGION          = "${var.region}"
     }
   }
@@ -76,10 +76,20 @@ data "aws_iam_policy_document" "athena_policy" {
     actions = [
       "s3:*",
       "s3:GetBucketLocation",
+      "s3:PutObject",
+      "s3:ListMultipartUploadParts",
+      "s3:ListBucketMultipartUploads",
+      "s3:ListBucket",
+      "s3:ListAllMyBuckets",
+      "s3:GetObject",
+      "s3:GetBucketLocation",
+      "s3:CreateBucket",
+      "s3:AbortMultipartUpload",
     ]
 
     resources = [
       "${aws_s3_bucket.s3_bucket.arn}/*",
+      "${aws_s3_bucket.s3_bucket.arn}",
     ]
   }
 }
