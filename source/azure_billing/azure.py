@@ -99,4 +99,4 @@ def lambda_handler(event, context):
     s3.meta.client.upload_file(
         "/tmp/azure_usage.csv", S3BucketName, "Azure/year=%s/month=%s/azure_usage.csv" %(datee.year, datee.month)
     )
-    bill()
+    #bill()

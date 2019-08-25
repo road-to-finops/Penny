@@ -33,3 +33,7 @@ variable "API" {
 
 variable "Enrolmentid" {
 }
+
+variable "emails" {
+  
+}
