@@ -26,10 +26,14 @@ variable "azure_billing_cron" {
   default = "cron(07 2 * ? * *)"
 }
 
+variable "gcp_billing_cron" {
+  default = "cron(10 * * ? * *)"
+}
+
 variable "account_id" {}
 
-variable "API" {
-}
+variable "API" {}
 
-variable "Enrolmentid" {
-}
+variable "Enrolmentid" {}
+
+variable "google_cloud_api" {}

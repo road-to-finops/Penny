@@ -35,9 +35,6 @@ module "lambda_azure_billing" {
   }
 }
 
-
-
-
 data "template_file" "azure_billing_sql" {
   template = "${file("${path.module}/Athena_Queries/azure_billing_export.sql")}"
 
@@ -46,7 +43,6 @@ data "template_file" "azure_billing_sql" {
     Tabel_Value    = "mybillingreport"
   }
 }
-
 
 data "aws_iam_policy_document" "azure_billing_policy" {
   statement {
