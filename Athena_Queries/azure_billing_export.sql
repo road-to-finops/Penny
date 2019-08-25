@@ -1,0 +1,1 @@
+select project, subscriptionguid, subscriptionname, "cost code" ,"cost centre", sum(cost) as cost  FROM database.azure left JOIN "table"."database" ON azure.subscriptionguid = accounts.account_number where month = CAST((month(now())-1) AS VARCHAR) group by  project, account_number, subscriptionguid, subscriptionname, "cost code", "cost centre"

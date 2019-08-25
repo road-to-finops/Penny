@@ -21,3 +21,15 @@ variable "ri_reccomendation_cron" {
 variable "athena_db_name" {
   default = "athenacurcfn_mybillingreport"
 }
+
+variable "azure_billing_cron" {
+  default = "cron(07 2 * ? * *)"
+}
+
+variable "account_id" {}
+
+variable "API" {
+}
+
+variable "Enrolmentid" {
+}
