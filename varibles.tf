@@ -27,3 +27,9 @@ variable "azure_billing_cron" {
 }
 
 variable "account_id" {}
+
+variable "API" {
+}
+
+variable "Enrolmentid" {
+}
