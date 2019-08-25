@@ -29,7 +29,7 @@ module "lambda_gcp_billing" {
 }
 
 data "template_file" "GoogleCloud" {
-  template = "${file("/Users/sgooch/Downloads/google.json")}"
+  template = "${file("source/gcp_billing/googleapi.json")}"
 }
 
 data "aws_iam_policy_document" "gcp_billing_policy" {
