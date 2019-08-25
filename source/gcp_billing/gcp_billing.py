@@ -64,8 +64,9 @@ def main(yesterday):
   # Make a list of command line arguments, omitting the [0] element
   # which is the script itself.
 
-  bucket_name = os.environ["GCP_BUCKET"]
-  blob_name = 'gcp-%s.csv' %yesterday
+  gcp_bucket_name = os.environ["GCP_BUCKET"]
+  gcp_billing_key = os.environ["GCP_BILLING_KEY"]
+  blob_name = '%s-%s.csv' %(gcp_billing_key, yesterday)
   local_file_name = '/tmp/download_gcp-%s.csv' %yesterday
 
   key()
@@ -74,11 +75,11 @@ def main(yesterday):
   #credentials = service_account.Credentials.from_service_account_info(info)
   credentials = service_account.Credentials.from_service_account_file('/tmp/key.text')
   # Instantiate the client.
-  client = storage.Client(project="billing-data-193675",credentials=credentials)
+  client = storage.Client(project=gcp_bucket_name, credentials=credentials)
   print('Downloading an object from a Cloud Storage bucket to a local file ...')
   try:
     # Get the bucket.
-    bucket = client.get_bucket(bucket_name)
+    bucket = client.get_bucket(gcp_bucket_name)
     # Instantiate the object.
     blob = bucket.blob(blob_name)
     # Downloads an object from the bucket.
