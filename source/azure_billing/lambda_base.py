@@ -38,7 +38,7 @@ def generate_csv(data, headings=[]):
     return f.getvalue()
 
 
-
+'''
 import logging
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
@@ -154,3 +154,4 @@ logging.getLogger("__main__").setLevel(logging.DEBUG)
 logging.getLogger("botocore").setLevel(logging.WARN)
 logging.getLogger("pynamodb").setLevel(logging.INFO)
 warnings.filterwarnings(action="ignore", category=UserWarning, module="fuzzywuzzy")
+'''

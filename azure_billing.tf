@@ -31,7 +31,6 @@ module "lambda_azure_billing" {
       REGION          = "${var.region}"
       QUERY           = "${data.template_file.azure_billing_sql.rendered}"
       QUERY_NAME      = "Azure_Monthly_Bill"
-      EMAILS          = "${var.emails}"
     }
   }
 }

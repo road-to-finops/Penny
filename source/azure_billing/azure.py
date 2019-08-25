@@ -6,7 +6,6 @@ import csv
 import os
 import boto3
 import json
-import billing_email
 from lambda_base import generate_csv
 
 def date2(today):  # Gets todays date and the start date of the start of the month
@@ -37,7 +36,7 @@ def sort(result, results, datee):
         item.update({'year':datee.year})
         results.append(item)
     return results
-
+'''
 def bill():
     bucket_location = os.environ["BUCKET_LOCATION"]
     Region = os.environ["REGION"]
@@ -47,7 +46,7 @@ def bill():
     Query_Name = os.environ["QUERY_NAME"]
     emails = os.environ["EMAILS"]
     billing_email.main(bucket_location, Database, Tabel, Query, Query_Name, emails, Region)
-
+'''
 
 def lambda_handler(event, context):
     month = ""
