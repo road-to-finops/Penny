@@ -26,7 +26,7 @@ module "lambda_azure_billing" {
       API             = "${var.API}"
       BUCKET_NAME     = "${aws_s3_bucket.s3_bucket.id}"
       BUCKET_LOCATION = "s3://${aws_s3_bucket.s3_bucket.id}/athena/azure_lambda"
-      DATABASE        = "kpmgcostanalysisathenadatabase"
+      DATABASE        = "mybillingreport"
       TABLE           = "azure"
       REGION          = "${var.region}"
       QUERY           = "${data.template_file.azure_billing_sql.rendered}"
