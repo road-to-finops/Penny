@@ -64,7 +64,7 @@ def main(yesterday):
   # Make a list of command line arguments, omitting the [0] element
   # which is the script itself.
 
-  bucket_name = "billing_data-193675"
+  bucket_name = os.environ["GCP_BUCKET"]
   blob_name = 'gcp-%s.csv' %yesterday
   local_file_name = '/tmp/download_gcp-%s.csv' %yesterday
 

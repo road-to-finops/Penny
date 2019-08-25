@@ -36,4 +36,4 @@ variable "API" {}
 
 variable "Enrolmentid" {}
 
-variable "google_cloud_api" {}
+variable "gcp_bucket" {}

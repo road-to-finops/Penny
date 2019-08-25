@@ -24,6 +24,7 @@ module "lambda_gcp_billing" {
     variables {
       API            = "${data.template_file.GoogleCloud.rendered}"
       S3_BUCKET_NAME = "${aws_s3_bucket.s3_bucket.id}"
+      GCP_BUCKET = "${var.gcp_bucket}"
     }
   }
 }
