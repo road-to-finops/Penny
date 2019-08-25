@@ -1,0 +1,5 @@
+requests==2.21.0
+requests-oauthlib==1.2.0
+urllib3==1.24
+tenacity==5.0.4
+git+https://terraform-readonly:T87kN3x90yu@stash.customappsteam.co.uk/scm/pl/lambda_base.git@0.4.1#egg=lambda_base
