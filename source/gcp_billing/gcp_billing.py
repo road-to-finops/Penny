@@ -38,8 +38,8 @@ def excel( yesterday):
   month = yesterday.month
 
 
-  with open(r"/tmp/download_kpmg-%s.csv"%yesterday) as in_file, open(
-      r"/tmp/kpmg-%s.csv"%yesterday, "w"
+  with open(r"/tmp/download_gcp-%s.csv"%yesterday) as in_file, open(
+      r"/tmp/gcp-%s.csv"%yesterday, "w"
   ) as out_file:
       commaout = csv.reader(in_file, delimiter=",")
       semicolonin = csv.writer(out_file, delimiter=";")
@@ -65,8 +65,8 @@ def main(yesterday):
   # which is the script itself.
 
   bucket_name = "billing_data-193675"
-  blob_name = 'kpmg-%s.csv' %yesterday
-  local_file_name = '/tmp/download_kpmg-%s.csv' %yesterday
+  blob_name = 'gcp-%s.csv' %yesterday
+  local_file_name = '/tmp/download_gcp-%s.csv' %yesterday
 
   key()
 
@@ -108,5 +108,5 @@ def lambda_handler(event, context):
 
   s3 = boto3.resource("s3")
   s3.meta.client.upload_file(
-      "/tmp/kpmg-%s.csv"%yesterday, S3BucketName, "GCP/year=%s/month=%s/kpmg-%s.csv" %(year, month, yesterday)
+      "/tmp/gcp-%s.csv"%yesterday, S3BucketName, "GCP/year=%s/month=%s/gcp-%s.csv" %(year, month, yesterday)
   )
