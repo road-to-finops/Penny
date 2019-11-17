@@ -45,5 +45,5 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
   'serialization.format' = ',',
   'field.delim' = ','
-) LOCATION 's3://s3_bucket/Azure/'
+) LOCATION 's3://bucket/Azure/'
 TBLPROPERTIES ('has_encrypted_data'='false',  'skip.header.line.count'='1');
