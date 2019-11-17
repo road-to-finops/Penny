@@ -39,4 +39,3 @@ variable "Enrolmentid" {}
 variable "gcp_bucket" {}
 
 variable "gcp_billing_key" {}
-

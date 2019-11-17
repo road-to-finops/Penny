@@ -113,8 +113,5 @@ resource "aws_lambda_permission" "allow_cloudwatch_cur" {
   action        = "lambda:InvokeFunction"
   function_name = "${module.lambda_cur.function_name}"
   principal     = "events.amazonaws.com"
-
-  #source_arn    = "${aws_cloudwatch_event_rule.cur_cloudwatch_rule.arn}"
-
-  depends_on = ["module.lambda_cur"]
+  depends_on    = ["module.lambda_cur"]
 }
