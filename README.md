@@ -71,8 +71,12 @@ terraform init
 terraform plan
 terraform apply
 ```
+8. Run setup lambda
+```
+aws lambda invoke --function-name lambda_cur out --log-type Tail --profile penny
+```
 
-#### Notes
+#### Versions
 Terraform v0.11.13
 Python 3.6.5 
-Windows install 
+
