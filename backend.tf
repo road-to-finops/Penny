@@ -1,14 +1,14 @@
 provider "aws" {
-  profile = "personal"
+  profile = "<aws profile>"
   region  = "eu-west-1"
 }
 
 terraform {
   backend "s3" {
-    bucket  = "steph-dev-account-bucket"
+    bucket  = "<state bucket>"
     key     = "statefile/terraform.tfstate"
     region  = "eu-west-1"
     encrypt = "true"
-    profile = "personal"
+    profile = "<aws profile>"
   }
 }
