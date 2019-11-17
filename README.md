@@ -1,38 +1,26 @@
 # Penny
-Tool for AWS Billing
+This is a tool to help with AWS billing and reporting.
+
+The goal for this deployment is to start collecting your Cost and Uage report from AWS in a format for athena to read. 
 
 
-Cost and Usage Report Creatation and Storage
+This stems from the AWS supplied cloud formation but running this script means there is no manual procces
 
-A terraform to create s3 for billing to go into, athana database to query it from, cloudwatch to trigger partions monthly, state machine for the full process.
-=======
+CUR proccess:
 
-ONLY RUNS IN SANDBOX AS A PLAN THROUGH STATE
-
-
-Cost and Usage Report Creatation and Storage
-===========
-
-Currently waiting on:
-- Team/ Accouny Dynamo table 
-- CUR Athena capability
-A terraform to create s3 for billing to go into, athana database to query it from, cloudwatch to trigger partions monthly, state machine for the full process.
-
-
-Currently waiting on:
-- Team/ Accouny Dynamo table 
-- CUR Athena capability
-
-![alt text](https://wiki.customappsteam.co.uk/download/attachments/30869923/CUR%20Managment.jpg?version=1&modificationDate=1551435076074&api=v2)
-
-
-
-//NOTE for boto3 > pip install -r requirements.txt -t ./files
-
-
+- A terraform to create s3 for billing to go into
+- Athana database 
+- Glue crawler to keep tabel uptodat
 
 
 ### Steps
-- Deploy Terraform
-- Run CUR Lambda
-- Wait for report to generate
+--
+```
+terraform
+```
+
+
+#### Notes
+Terraform v0.11.13
+Python 3.6.5 
+
