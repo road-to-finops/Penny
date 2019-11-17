@@ -92,6 +92,6 @@ See the wiki for details
 
 
 #### Notes
-Terraform v0.11.13
-Python 3.6.5 
-Windows install 
+- Terraform v0.11.13
+- Python 3.6.5 
+ 
