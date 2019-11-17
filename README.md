@@ -63,7 +63,8 @@ aws s3api create-bucket --bucket penny-bucket-*accountnumber*- -region eu-west-1
 
 6. Update the Terraform files
 
-Open 'backend.tf' and replace the account number with your account number
+Open 'backend.tf' and replace the account number with your account number.
+Open 'varibles.tf' and add to account id 
  
 7. Deploy Terraform
 ```

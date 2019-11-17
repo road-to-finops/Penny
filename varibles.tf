@@ -30,12 +30,22 @@ variable "gcp_billing_cron" {
   default = "cron(10 * * ? * *)"
 }
 
-variable "account_id" {}
+variable "account_id" {
+  default = ""
+}
 
-variable "API" {}
+variable "API" {
+  default = ""
+}
 
-variable "Enrolmentid" {}
+variable "Enrolmentid" {
+  default = ""
+}
 
-variable "gcp_bucket" {}
+variable "gcp_bucket" {
+  default = ""
+}
 
-variable "gcp_billing_key" {}
+variable "gcp_billing_key" {
+  default = ""
+}
