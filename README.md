@@ -58,14 +58,19 @@ Default output format [None]: json
 5. Create s3
 Replace the account number with your account number
 ```
-aws s3api create-bucket --bucket penny-bucket-*accountnumber*- -region eu-west-1
+aws s3api create-bucket --bucket penny-bucket-*accountnumber*- -region eu-west-1 --profile penny
 ```
 
 6. Update the Terraform files
 
 Open 'backend.tf' and replace the account number with your account number
  
-
+7. Deploy Terraform
+```
+terraform init
+terraform plan
+terraform apply
+```
 
 #### Notes
 Terraform v0.11.13
