@@ -85,11 +85,16 @@ Once the 24hrs is comeplete you should have an Athena Database with your aws bil
 
 ## Next Steps
 
+### Reports
 To run more exciting data collection or better yet reports for your data you can use the avalible terraform. Using these documents you can setup billing for your accounts.
 
 See the wiki for details 
 [Home · road-to-finops/Penny Wiki · GitHub](https://github.com/road-to-finops/Penny/wiki)
 
+### Visualization 
+
+After you have data in the anthea table you can put it in AWS Quicksight
+https://aws.amazon.com/blogs/big-data/query-and-visualize-aws-cost-and-usage-data-using-amazon-athena-and-amazon-quicksight/
 
 #### Notes
 - Terraform v0.11.13
