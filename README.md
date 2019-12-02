@@ -58,7 +58,7 @@ Default output format [None]: json
 5. Create s3
 Replace the account number with your billing account number
 ```
-aws s3api create-bucket --bucket penny-bucket-*accountnumber*- -region eu-west-1 --profile penny
+aws s3api create-bucket --bucket penny-bucket-*account-number* --region eu-west-1 --profile penny  --create-bucket-configuration LocationConstraint=eu-west-1
 ```
 
 6. Update the Terraform files
