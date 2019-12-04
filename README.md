@@ -43,6 +43,7 @@ pip3 install awscli --upgrade --user
 3. Create an AWS IAM User
 This needs to be in your **billing account**.  It will need with programtic access with the administrator policy. See AWS instructions here
 [Creating Your First IAM Admin User and Group - AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html)
+Use the Policy in the iam.json file
 
 Copy the Access and Secret key to your machine
 
