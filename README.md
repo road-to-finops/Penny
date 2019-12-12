@@ -101,3 +101,8 @@ https://aws.amazon.com/blogs/big-data/query-and-visualize-aws-cost-and-usage-dat
 - Terraform v0.11.13
 - Python 3.6.5 
  
+
+
+#### Athena Queries
+
+- Savings Plan Cost Association - find which accounts consumed the amount you commited too on savings plans
