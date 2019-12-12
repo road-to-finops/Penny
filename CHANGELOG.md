@@ -16,3 +16,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - na
 ### Removed
 - na
+
+
+## [1.0.4] - 2019-08-25
+### Added
+- Savings plan Query
+- IAM Policy to create Penny
+- Read me updates
+### Changed
+- na
+### Removed
+- na
