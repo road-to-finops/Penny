@@ -27,3 +27,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - na
 ### Removed
 - na
+
+
+## [1.0.6] - 2020-01-12
+### Added
+- added lambda for quicksigh data setup
+### Changed
+- na
+### Removed
+- na
+
+
+
+
