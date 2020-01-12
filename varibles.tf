@@ -49,3 +49,8 @@ variable "gcp_bucket" {
 variable "gcp_billing_key" {
   default = ""
 }
+
+
+variable "user_arn" {
+  default = ""
+}

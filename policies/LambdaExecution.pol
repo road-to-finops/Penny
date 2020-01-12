@@ -51,7 +51,8 @@
                 "s3:*",
                 "lambda:InvokeFunction",
                 "cur:DescribeReportDefinitions",
-                "cur:PutReportDefinition"
+                "cur:PutReportDefinition",
+                "quicksight:*"
             ],
             "Effect": "Allow",
             "Resource": "*"
