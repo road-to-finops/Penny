@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - added lambda for quicksigh data setup
 ### Changed
-- na
+- updated athena queries to have a more reliable month/year check
 ### Removed
 - na
 
