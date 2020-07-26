@@ -209,7 +209,7 @@ resource "aws_iam_role_policy" "compute_optimizer_role_policy" {
 "s3:PutObject"
 ],
 "Resource": [
-"arn:aws:s3:::kpmgcloud-cost-report${var.env}/*"
+"arn:aws:s3:::${aws_s3_bucket.s3_bucket.id}${var.env}/*"
 ]
 }
 ]
