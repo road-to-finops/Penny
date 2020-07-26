@@ -1,0 +1,255 @@
+{
+    "kind": "bigquery#table",
+    "creationTime": "1573670997246",
+    "location": "EU",
+    "tableReference": {
+        "projectId": "billing-data-193675",
+        "tableId": "gcp_billing_export_v1_013897_8670C0_F99FFA",
+        "datasetId": "billing"
+    },
+    "numRows": "3798869",
+    "numBytes": "1529946398",
+    "etag": "ChFG+browelV0TDHYnEBBg==",
+    "numLongTermBytes": "332132519",
+    "timePartitioning": {
+        "type": "DAY"
+    },
+    "lastModifiedTime": "1584537775315",
+    "type": "TABLE",
+    "id": "billing-data-193675:billing.gcp_billing_export_v1_013897_8670C0_F99FFA",
+    "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/billing-data-193675/datasets/billing/tables/gcp_billing_export_v1_013897_8670C0_F99FFA",
+    "schema": {
+        "fields": [
+            {
+                "type": "STRING",
+                "name": "billing_account_id",
+                "mode": "NULLABLE"
+            },
+            {
+                "fields": [
+                    {
+                        "type": "STRING",
+                        "name": "id",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "description",
+                        "mode": "NULLABLE"
+                    }
+                ],
+                "type": "RECORD",
+                "name": "service",
+                "mode": "NULLABLE"
+            },
+            {
+                "fields": [
+                    {
+                        "type": "STRING",
+                        "name": "id",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "description",
+                        "mode": "NULLABLE"
+                    }
+                ],
+                "type": "RECORD",
+                "name": "sku",
+                "mode": "NULLABLE"
+            },
+            {
+                "type": "TIMESTAMP",
+                "name": "usage_start_time",
+                "mode": "NULLABLE"
+            },
+            {
+                "type": "TIMESTAMP",
+                "name": "usage_end_time",
+                "mode": "NULLABLE"
+            },
+            {
+                "fields": [
+                    {
+                        "type": "STRING",
+                        "name": "id",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "name",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "fields": [
+                            {
+                                "type": "STRING",
+                                "name": "key",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "type": "STRING",
+                                "name": "value",
+                                "mode": "NULLABLE"
+                            }
+                        ],
+                        "type": "RECORD",
+                        "name": "labels",
+                        "mode": "REPEATED"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "ancestry_numbers",
+                        "mode": "NULLABLE"
+                    }
+                ],
+                "type": "RECORD",
+                "name": "project",
+                "mode": "NULLABLE"
+            },
+            {
+                "fields": [
+                    {
+                        "type": "STRING",
+                        "name": "key",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "value",
+                        "mode": "NULLABLE"
+                    }
+                ],
+                "type": "RECORD",
+                "name": "labels",
+                "mode": "REPEATED"
+            },
+            {
+                "fields": [
+                    {
+                        "type": "STRING",
+                        "name": "key",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "value",
+                        "mode": "NULLABLE"
+                    }
+                ],
+                "type": "RECORD",
+                "name": "system_labels",
+                "mode": "REPEATED"
+            },
+            {
+                "fields": [
+                    {
+                        "type": "STRING",
+                        "name": "location",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "country",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "region",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "zone",
+                        "mode": "NULLABLE"
+                    }
+                ],
+                "type": "RECORD",
+                "name": "location",
+                "mode": "NULLABLE"
+            },
+            {
+                "type": "TIMESTAMP",
+                "name": "export_time",
+                "mode": "NULLABLE"
+            },
+            {
+                "type": "FLOAT",
+                "name": "cost",
+                "mode": "NULLABLE"
+            },
+            {
+                "type": "STRING",
+                "name": "currency",
+                "mode": "NULLABLE"
+            },
+            {
+                "type": "FLOAT",
+                "name": "currency_conversion_rate",
+                "mode": "NULLABLE"
+            },
+            {
+                "fields": [
+                    {
+                        "type": "FLOAT",
+                        "name": "amount",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "unit",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "FLOAT",
+                        "name": "amount_in_pricing_units",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "STRING",
+                        "name": "pricing_unit",
+                        "mode": "NULLABLE"
+                    }
+                ],
+                "type": "RECORD",
+                "name": "usage",
+                "mode": "NULLABLE"
+            },
+            {
+                "fields": [
+                    {
+                        "type": "STRING",
+                        "name": "name",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "type": "FLOAT",
+                        "name": "amount",
+                        "mode": "NULLABLE"
+                    }
+                ],
+                "type": "RECORD",
+                "name": "credits",
+                "mode": "REPEATED"
+            },
+            {
+                "fields": [
+                    {
+                        "type": "STRING",
+                        "name": "month",
+                        "mode": "NULLABLE"
+                    }
+                ],
+                "type": "RECORD",
+                "name": "invoice",
+                "mode": "NULLABLE"
+            },
+            {
+                "type": "STRING",
+                "name": "cost_type",
+                "mode": "NULLABLE"
+            }
+        ]
+    }
+}

@@ -1,0 +1,4 @@
+flatten-dict==0.1.0
+requests==2.21.0
+requests-oauthlib==1.2.0
+tqdm==4.32.1
