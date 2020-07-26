@@ -14,7 +14,10 @@
                 "aws-portal:*",
                 "quicksight:*",
                 "athena:*", 
-                "events:*"
+                "events:*",
+                "ses:*", 
+                "glue:*",
+                "sqs:*" 
             ],
             "Resource": "*"
         }
