@@ -9,7 +9,7 @@ These instructions will get you a copy of the Tool up and running on your local 
 
 * Install Boto3
 * Python3
-* aws-vault
+
 
 Ref: https://boto3.readthedocs.io/en/latest/guide/quickstart.html
 
@@ -19,7 +19,7 @@ Ref: https://boto3.readthedocs.io/en/latest/guide/quickstart.html
 Clone the Tool and run as below
 
 ```
-aws-vault exec <cred>
+
 ./multi_account.py -m <methods> -m <region>
 
 #### Methods
@@ -40,5 +40,4 @@ It will use your deafult from your account if not specified
 
 **********************
 
-aws-vault exec <role>
 ./multi_account.py 
