@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2020-07-16
+- Changes Upgraded to terraform 12
+- Add SSM file and how to add them
+
+
 ## [1.0.13] - 2020-06-16
 - Changes for FOPS-902 
 - Add error if Athena Query returns no results to finops bill to athena_query_lambda.tf
