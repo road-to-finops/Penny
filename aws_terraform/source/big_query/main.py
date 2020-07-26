@@ -83,7 +83,7 @@ def make_json(month, records):
     logger.info("Creating json file")    
     
     try:
-        with open(f"/tmp/kpmg-{month}.json", "w") as outfile:
+        with open(f"/tmp/gcp-{month}.json", "w") as outfile:
             for result in records:
                 json.dump(result, outfile)
                 outfile.write('\n')

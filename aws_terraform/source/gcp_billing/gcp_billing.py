@@ -73,7 +73,7 @@ def make_json(month, records):
     logger.info("Creating json file")    
     
     try:
-        with open(f"/tmp/kpmg-{month}.json", "w") as outfile:
+        with open(f"/tmp/gcp-{month}.json", "w") as outfile:
             for result in records:
                 json.dump(result, outfile)
                 outfile.write('\n')
@@ -105,5 +105,5 @@ def lambda_handler(event, context):
     
     s3 = boto3.resource("s3")
     s3.meta.client.upload_file(
-        f"/tmp/kpmg-{bqmonth}.json", S3BucketName, f"GCP/year={year}/month={month}/kpmg-{year}-{month}.json" 
+        f"/tmp/gcp-{bqmonth}.json", S3BucketName, f"GCP/year={year}/month={month}/gcp-{year}-{month}.json" 
     )

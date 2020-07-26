@@ -9,6 +9,6 @@ Gathers Optimiser Rec for EC2 for estate useing Recharger into json file
 >> pip3 install -r requirements.txt 
 >> export TOKEN=<rechargertoken>
 >> export API_URL=https://recharger.customappsteam.co.uk
->> export BUCKET_NAME=kpmgcloud-cost-report
+>> export BUCKET_NAME=
 >> python3 main.py
 ```
