@@ -86,10 +86,12 @@ def lambda_handler(event, context):
                     #removing dolla sighn
                     if 'Monthly Storage Cost' in account.keys():
                         cost = account['Monthly Storage Cost']
-                        account['Monthly Storage Cost'] = cost[1:]
+                        new_string = cost.replace(",","")
+                        account['Monthly Storage Cost'] = new_string[1:]
                     if 'Estimated Monthly Savings' in account.keys():
                         ecost = account['Estimated Monthly Savings']
-                        account['Estimated Monthly Savings'] = ecost[1:]
+                        new_string = ecost.replace(",","")
+                        account['Estimated Monthly Savings'] = new_string[1:]
 
                     if 'Estimated Monthly Savings (On Demand)' in account.keys():
                         odcost = account['Estimated Monthly Savings (On Demand)']
