@@ -36,6 +36,14 @@ def assume_role(account_id, service, region):
         logging.warning("Unexpected error Account %s: %s" % (account_id, e))
         return None
 
+def lower_keys(accounts_data):
+    if isinstance(accounts_data, list):
+        return [lower_keys(value) for value in accounts_data]
+    elif isinstance(accounts_data, dict):
+        return dict((key.lower(), lower_keys(value)) for key, value in accounts_data.items())
+    else:
+        return accounts_data
+
 def lambda_handler(event, context):
     result = []
     team = ""
@@ -47,7 +55,6 @@ def lambda_handler(event, context):
             account_id = record["body"]
             
             print(account_id)
-
     
     
             try:
@@ -94,7 +101,12 @@ def lambda_handler(event, context):
                     if account['name']== "Unassociated Elastic IP Addresses":
                         account['Estimated Monthly Savings'] = '3.36'
                         
-                    json.dump(account, outfile)
+                    account_lower = lower_keys(account)
+                    #remove dollar signs so we can have ints
+                    if str(account_lower).find("$") != -1:
+                        account_lower =str(account_lower).replace("$", "")
+                    
+                    json.dump(account_lower, outfile)
                     outfile.write('\n')
 
             today = date.today()
