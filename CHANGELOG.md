@@ -4,8 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.2] - 2020-07-28
+- Changes added a bit to TA function to remove commer from savings. took away the string element
+
+
+
 ## [1.2.1] - 2020-07-28
-- Changes added a bit to TA fucntion to convert the code to lower case for crawlers and remove dollar signs 
+- Changes added a bit to TA function to convert the code to lower case for crawlers and remove dollar signs 
 
 ## [1.2.0] - 2020-07-16
 - Changes Upgraded to terraform 12
