@@ -9,6 +9,7 @@ def lambda_handler(event, context):
     
     S3BucketName = os.environ['BUCKET_NAME']
     Region = os.environ['REGION']
+    TimeUnit = os.environ['TIMEUNIT']
     print  (S3BucketName)
    
     response = client.describe_report_definitions()
@@ -17,7 +18,7 @@ def lambda_handler(event, context):
     response = client.put_report_definition(
       ReportDefinition={
           'ReportName': 'mybillingreport',
-          'TimeUnit': 'DAILY',
+          'TimeUnit': TimeUnit,
           'Format': 'Parquet',
           'Compression': 'Parquet',
           'AdditionalSchemaElements': [
