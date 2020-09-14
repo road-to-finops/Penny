@@ -18,6 +18,7 @@ module "lambda_cur" {
     variables = {
       BUCKET_NAME = aws_s3_bucket.s3_bucket.id
       REGION      = var.region
+      TIMEUNIT = var.timeunit
     }
   }
   tags = {

@@ -17,7 +17,9 @@
                 "events:*",
                 "ses:*", 
                 "glue:*",
-                "sqs:*" 
+                "sqs:*", 
+                "ssm:*",
+                "budgets:*"
             ],
             "Resource": "*"
         }

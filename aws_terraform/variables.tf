@@ -14,6 +14,12 @@ variable "region" {
   default = "eu-west-1"
 }
 
+variable "timeunit" {
+  type = string
+  description = "granularity of cur"
+  default = "HOURLY"
+}
+
 variable "aws_report_cron" {
   default = "cron(07 12 * ? * *)"
 }

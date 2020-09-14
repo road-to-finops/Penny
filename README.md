@@ -83,7 +83,6 @@ aws s3api create-bucket --bucket penny-bucket-*account-number* --region eu-west-
 6. Update the Terraform files
 Go to the AWS Terraform folder
 Open 'backend.tf' and replace the account number with your account number.
-Open 'varibles.tf' and add to account id 
  
 
 7.  Create SSM
