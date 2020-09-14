@@ -12,7 +12,7 @@ def lambda_handler(event, context):
 
     response = client.create_stack(
     StackName='Crawler',
-    TemplateURL='https://s3-%s.amazonaws.com/%s/State/lambda/mybillingreport/crawler-cfn.yml' %(Region) %(S3BucketName),
+    TemplateURL=f"https://s3-{Region}.amazonaws.com/{S3BucketName}/State/lambda/mybillingreport/crawler-cfn.yml",
     Capabilities=[
         'CAPABILITY_IAM'
     ]
