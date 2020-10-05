@@ -1,0 +1,1 @@
+SELECT \"line_item_usage_account_id\", round(sum(\"line_item_unblended_cost\"),2) AS cost FROM ${Database_Value}.${Table_Value} WHERE month(bill_billing_period_start_date) = 2 AND line_item_usage_account_id LIKE ${account_id} GROUP BY line_item_usage_account_id;

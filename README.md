@@ -103,6 +103,8 @@ terraform apply
 aws lambda invoke --function-name lambda_cur out --log-type Tail --profile penny
 ```
 
+10. Create Schedule for CUR Crawler
+``` aws glue update-crawler-schedule --crawler-name AWSCURCrawler-mybillingreport --schedule "cron(0 2 2 * ? *)" ```
 
 Now you have setup your access, deployed your terraform and triggered your lambda function you are all setup.
 
