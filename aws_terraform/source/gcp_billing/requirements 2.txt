@@ -1,0 +1,8 @@
+google-api-core==1.15.0
+google-auth==1.9.0
+google-cloud-core==1.1.0
+google-cloud-storage==1.16.1
+google-resumable-media==0.5.0
+googleapis-common-protos==1.6.0
+boto3==1.12.0  
+google-cloud-bigquery==1.24.0
